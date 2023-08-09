@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tokopedia-play",
+    "dateExported": "2023-07-27T11:45:36.193Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "860e44ce-36d7-495e-b768-1be9f2f1999b",
+            "colId": "61ba2bdc-584a-4a82-a5e6-82f357a80552",
+            "containerId": "",
+            "name": "http://localhost:3000/api/",
+            "url": "http://localhost:3000/api/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-27T02:42:45.357Z",
+            "modified": "2023-07-27T02:42:45.357Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "36609ac7-247d-4fcf-80fc-27eadfce4725",
+            "colId": "61ba2bdc-584a-4a82-a5e6-82f357a80552",
+            "containerId": "",
+            "name": "http://localhost:3000/api/products/123213av",
+            "url": "http://localhost:3000/api/products/123213av",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-27T02:43:54.131Z",
+            "modified": "2023-07-27T02:43:54.131Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fad91f6b-281a-433b-a3eb-1936b9610fc5",
+            "colId": "61ba2bdc-584a-4a82-a5e6-82f357a80552",
+            "containerId": "",
+            "name": "http://localhost:3000/api/comments/123213av",
+            "url": "http://localhost:3000/api/comments/123213av",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-07-27T02:44:25.163Z",
+            "modified": "2023-07-27T02:44:25.163Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "67b0a8e3-7342-444d-8d3e-4172b318bf91",
+            "colId": "61ba2bdc-584a-4a82-a5e6-82f357a80552",
+            "containerId": "",
+            "name": "http://localhost:3000/api/comment",
+            "url": "http://localhost:3000/api/comment",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-07-27T02:47:10.577Z",
+            "modified": "2023-07-27T02:47:10.577Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \n  \"username\": \"mrasyadc\", \"comment\": \"The video was entertaining\", \"videoId\": \"12527828av\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
