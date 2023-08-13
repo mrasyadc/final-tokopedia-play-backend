@@ -36,7 +36,7 @@ router.get("/products/:id", async (req, res) => {
 
     // call services to get all products list in a video
     const products = await getProduct(videoId);
-    res.status(200).json({ products: products });
+    res.status(200).json({ products });
   } catch (e) {
     res.status(400).json({ error: e.message });
   }
@@ -46,9 +46,9 @@ router.get("/comments/:id", async (req, res) => {
   try {
     const videoId = req.params.id;
     // call services to get all list comment in a video
-    const comment = await getComment(videoId);
-    console.log(comment);
-    res.status(200).json({ comment: comment });
+    const comments = await getComment(videoId);
+    // console.log(comment);
+    res.status(200).json({ comments });
   } catch (e) {
     res.status(400).json({ error: e.message });
   }

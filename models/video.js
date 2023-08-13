@@ -10,7 +10,7 @@ const videoSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
-  products: [{ id: { type: Schema.Types.ObjectId, ref: "Product" } }],
+  products: { type: [Schema.Types.ObjectId], ref: "Product" },
 });
 
 module.exports = mongoose.model("Video", videoSchema);

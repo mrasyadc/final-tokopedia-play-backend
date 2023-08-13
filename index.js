@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const mongoString = process.env.DATABASE_URL;
+const cors = require("cors");
 
 mongoose.connect(mongoString);
 
@@ -25,6 +26,9 @@ app.use(
     extended: true,
   })
 );
+
+// use it before all route definitions
+app.use(cors({ origin: "*" }));
 
 app.use("/api", routes);
 

@@ -43,19 +43,50 @@ async function productSeeder() {
       title: "Apple MACBOOK AIR 2020 M1 CHIP 256GB RAM 8GB Garansi IBOX",
       productURL:
         "https://www.tokopedia.com/tokobaru-s/apple-macbook-air-2020-m1-chip-256gb-ram-8gb-garansi-ibox-silver?extParam=whid%3D7190022%26cmp%3D1%26src%3Dwishlist",
+      imageURL:
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/9/13/0e1eba0b-4ebf-4a7c-a15d-826433bc792d.png",
       price: 11999000,
     },
     {
       title: "Xbox Series S Console - XBOX Series S",
       productURL:
         "https://www.tokopedia.com/nextgameofficial/xbox-series-s-console-xbox-series-s?extParam=whid%3D6586",
+      imageURL:
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/1/13/0b8b0d00-a130-4fdc-9f74-be05bfdceb2a.png",
       price: 3999000,
     },
     {
       title: "PS5 PS 5 Sony Playstation 5 Play Station 5 ( Disc Version )",
       productURL:
         "https://www.tokopedia.com/libertygame/ps5-ps-5-sony-playstation-5-play-station-5-disc-version-fifa23-jpn?extParam=whid%3D8806%26cmp%3D1%26src%3Dwishlist",
+      imageURL:
+        "https://www.tokopedia.com/libertygame/ps5-ps-5-sony-playstation-5-play-station-5-disc-version-fifa23-jpn?extParam=whid%3D8806%26cmp%3D1%26src%3Dwishlist",
       price: 7999000,
+    },
+    {
+      title: "Sony PS5 PlayStation 5 Console Mesin PS - Digital Indo",
+      productURL:
+        "https://www.tokopedia.com/nextgameofficial/sony-ps5-playstation-5-console-mesin-ps-digital-indo?extParam=ivf%3Dfalse%26src%3Dsearch",
+      imageURL:
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/6/2/6067be73-d4eb-4046-a5f6-188615fc95d9.png",
+      price: 7999000,
+    },
+    {
+      title:
+        "Stick Xbox Series X S XBOX One Wireless Controller Hitam Carbon Black",
+      productURL:
+        "https://www.tokopedia.com/butikgames/stick-xbox-series-x-s-xbox-one-wireless-controller-hitam-carbon-black?extParam=ivf%3Dfalse%26src%3Dsearch",
+      imageURL:
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/8/10/366a8131-28cf-4aea-8131-3ae0b2c9aa00.jpg",
+      price: 770000,
+    },
+    {
+      title: "XBOX Series S - Console Only",
+      productURL:
+        "https://www.tokopedia.com/psenterprise/xbox-series-s-console-only?extParam=ivf%3Dfalse%26src%3Dsearch",
+      imageURL:
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/8/30/e29c5093-24b5-4371-9ae4-a3ceedbc861d.jpg",
+      price: 3999000,
     },
   ]);
 }
@@ -65,36 +96,42 @@ async function videoSeeder() {
     {
       title: "The One Monitor Setup - Macbook, PS5 and PC",
       url: "https://www.youtube.com/watch?v=uZzW637rzyA&pp=ygURbWFjYm9vayBwczUgc2V0dXA%3D",
-      products: [
-        await Product.findOne({
-          title: { $regex: new RegExp("PS5") },
-        })
-          .exec()
-          .then((data) => data._id),
-      ],
+      products: await Product.find({
+        title: { $regex: new RegExp("PS5") },
+      })
+        .exec()
+        .then((data) => {
+          let dataWillBeInserted = [];
+          data.map((data) => dataWillBeInserted.push(data._id));
+          return [...dataWillBeInserted];
+        }),
     },
     {
       title:
         "My Minimal Productivity Mac Desk Setup (for students, office work, developers, and more!)",
       url: "https://www.youtube.com/watch?v=nxTHQfOG52o",
-      products: [
-        await Product.findOne({
-          title: { $regex: new RegExp("MACBOOK") },
-        })
-          .exec()
-          .then((data) => data._id),
-      ],
+      products: await Product.find({
+        title: { $regex: new RegExp("MACBOOK") },
+      })
+        .exec()
+        .then((data) => {
+          let dataWillBeInserted = [];
+          data.map((data) => dataWillBeInserted.push(data._id));
+          return [...dataWillBeInserted];
+        }),
     },
     {
       title: "STOP Buying games if you have an XBOX Series S",
       url: "https://www.youtube.com/watch?v=HnGrCCAAeXA",
-      products: [
-        await Product.findOne({
-          title: { $regex: new RegExp("XBOX") },
-        })
-          .exec()
-          .then((data) => data._id),
-      ],
+      products: await Product.find({
+        title: { $regex: new RegExp("XBOX") },
+      })
+        .exec()
+        .then((data) => {
+          let dataWillBeInserted = [];
+          data.map((data) => dataWillBeInserted.push(data._id));
+          return [...dataWillBeInserted];
+        }),
     },
   ]);
 }
