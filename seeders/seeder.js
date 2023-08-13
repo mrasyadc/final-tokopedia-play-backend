@@ -60,7 +60,7 @@ async function productSeeder() {
       productURL:
         "https://www.tokopedia.com/libertygame/ps5-ps-5-sony-playstation-5-play-station-5-disc-version-fifa23-jpn?extParam=whid%3D8806%26cmp%3D1%26src%3Dwishlist",
       imageURL:
-        "https://www.tokopedia.com/libertygame/ps5-ps-5-sony-playstation-5-play-station-5-disc-version-fifa23-jpn?extParam=whid%3D8806%26cmp%3D1%26src%3Dwishlist",
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/8/15/0c9a501c-e7b4-4123-b8c5-0e659d4a5997.jpg",
       price: 7999000,
     },
     {
