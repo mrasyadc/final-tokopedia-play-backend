@@ -1,11 +1,24 @@
 # final-tokopedia-play-backend
-Midterm task of Generasi GIGIH 3.0 by GoTo Impact by Muhammad Rasyad Caesarardhi (GG3FSGP0448)
+Final Project of Generasi GIGIH 3.0 by GoTo Impact by Muhammad Rasyad Caesarardhi (GG3FSGP0448)
 
-# How To Run
-Make sure you have an active mongodb database URL and save it to `.env` file
+- Frontend
+
+The live apps are available here on [tokopedia-play-frontend](https://tokopedia-play-ten.vercel.app) or [https://tokopedia-play-ten.vercel.app](https://tokopedia-play-ten.vercel.app). 
+
+Repository for front-end available here on [tokopedia-play-frontend repo](https://github.com/mrasyadc/tokopedia-play-frontend)
+
+- Backend
+  
+Backend Server are available here on [tokopedia-play-backend](https://final-tokopedia-play-backend-production.up.railway.app/api) or [https://final-tokopedia-play-backend-production.up.railway.app](https://final-tokopedia-play-backend-production.up.railway.app/api). 
+
+Repository for back-end system available here on [final-tokopedia-play-backend repo](https://github.com/mrasyadc/final-tokopedia-play-backend)
+
+## How To Run
+Make sure you have an active mongodb database URL and save it to `.env` file. You can copy from `.env.example` file
 
 ```
 DATABASE_URL = examplemongoconnectionurl/play
+PORT = 80
 ```
 And then you can initiate the project by using this
 
@@ -21,7 +34,7 @@ Start the app using command below
 npm run dev
 ```
 
-# Database Structure
+## Database Structure
 Database are divided into 3 collections (Comment, Product, and Video)
 
 <img width="422" alt="image" src="https://github.com/mrasyadc/final-tokopedia-play-backend/assets/56964497/7893e3db-abae-4074-9efa-8191b072d9f3">
@@ -35,11 +48,11 @@ Database are divided into 3 collections (Comment, Product, and Video)
 
 <img width="902" alt="image" src="https://github.com/mrasyadc/tokopedia-play-backend/assets/56964497/27448864-a882-46fb-a0bd-6d0c265a373f">
 
-# API Structure
+## API Structure
 API Structure are defined in here
 <img width="782" alt="image" src="https://github.com/mrasyadc/tokopedia-play-backend/assets/56964497/41066ef8-891b-42f6-87e7-2b8bbbe8db7a">
 
-# API Spec
+## API Spec
 
 **GET /api/**
 ----
