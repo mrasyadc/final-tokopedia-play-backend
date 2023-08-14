@@ -88,6 +88,23 @@ async function productSeeder() {
         "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/8/30/e29c5093-24b5-4371-9ae4-a3ceedbc861d.jpg",
       price: 3999000,
     },
+    {
+      title:
+        "Dell XPS 15 9520 RTX3050 i7 12700H 16GB 1TB SSD 15.6 FHD+ - Silver",
+      productURL:
+        "https://www.tokopedia.com/kingznotebook/dell-xps-15-9520-rtx3050-i7-12700h-16gb-1tb-ssd-15-6-fhd-silver?extParam=ivf%3Dfalse%26src%3Dsearch",
+      imageURL:
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/10/24/24fcef14-28b9-422c-883d-f3c0eebcb61b.png",
+      price: 21399000,
+    },
+    {
+      title: "PC FRACTAL DESIGN Terra - Terra Jade",
+      productURL:
+        "https://www.tokopedia.com/nanokomputer/fractal-design-terra-terra-jade?extParam=ivf%3Dfalse%26src%3Dsearch",
+      imageURL:
+        "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/31/77eb310b-d833-4b2f-9e65-6af45644946e.jpg",
+      price: 2850000,
+    },
   ]);
 }
 
@@ -125,6 +142,32 @@ async function videoSeeder() {
       url: "https://www.youtube.com/watch?v=HnGrCCAAeXA",
       products: await Product.find({
         title: { $regex: new RegExp("XBOX") },
+      })
+        .exec()
+        .then((data) => {
+          let dataWillBeInserted = [];
+          data.map((data) => dataWillBeInserted.push(data._id));
+          return [...dataWillBeInserted];
+        }),
+    },
+    {
+      title: "Downsizing a gaming PC without rebuying everything",
+      url: "https://www.youtube.com/watch?v=MViu-g1ORG4",
+      products: await Product.find({
+        title: { $regex: new RegExp("PC") },
+      })
+        .exec()
+        .then((data) => {
+          let dataWillBeInserted = [];
+          data.map((data) => dataWillBeInserted.push(data._id));
+          return [...dataWillBeInserted];
+        }),
+    },
+    {
+      title: "This is STILL the laptop to beat... right? - Dell XPS 15 (2023)",
+      url: "https://www.youtube.com/watch?v=BzxwfW49weo",
+      products: await Product.find({
+        title: { $regex: new RegExp("XPS") },
       })
         .exec()
         .then((data) => {
