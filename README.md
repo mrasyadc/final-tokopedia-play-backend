@@ -9,7 +9,7 @@ Repository for front-end available here on [tokopedia-play-frontend repo](https:
 
 - Backend
   
-Backend Server are available here on [tokopedia-play-backend](https://final-tokopedia-play-backend-production.up.railway.app/api) or [https://final-tokopedia-play-backend-production.up.railway.app](https://final-tokopedia-play-backend-production.up.railway.app/api). 
+Backend Server are available here on [tokopedia-play-backend](https://final-tokopedia-play-backend-production.up.railway.app/api) or [https://final-tokopedia-play-backend-production.up.railway.app/api](https://final-tokopedia-play-backend-production.up.railway.app/api). 
 
 Repository for back-end system available here on [final-tokopedia-play-backend repo](https://github.com/mrasyadc/final-tokopedia-play-backend)
 
