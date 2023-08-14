@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const mongoString = process.env.DATABASE_URL;
 const cors = require("cors");
+const port = process.env.PORT || 3000;
 
 mongoose.connect(mongoString);
 
@@ -32,6 +33,6 @@ app.use(cors({ origin: "*" }));
 
 app.use("/api", routes);
 
-app.listen(3000, () => {
+app.listen(port, "0.0.0.0", function () {
   console.log(`Server Started at ${3000}`);
 });
