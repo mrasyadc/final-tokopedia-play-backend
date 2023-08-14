@@ -1,4 +1,4 @@
-# tokopedia-play-backend
+# final-tokopedia-play-backend
 Midterm task of Generasi GIGIH 3.0 by GoTo Impact by Muhammad Rasyad Caesarardhi (GG3FSGP0448)
 
 # How To Run
@@ -24,7 +24,7 @@ npm run dev
 # Database Structure
 Database are divided into 3 collections (Comment, Product, and Video)
 
-<img width="443" alt="image" src="https://github.com/mrasyadc/tokopedia-play-backend/assets/56964497/e693de4f-5acc-4844-953c-69abde38b250">
+<img width="422" alt="image" src="https://github.com/mrasyadc/final-tokopedia-play-backend/assets/56964497/7893e3db-abae-4074-9efa-8191b072d9f3">
 
 - 1 video have many comments but not included in the document inside the video document but are separated. 1 comment are responsible for 1 comment inside a video. a comment is linked to a video.
 - 1 video document can have many products. a document in video collection have array of product object ID linked to the product.
